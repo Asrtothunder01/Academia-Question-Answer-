@@ -22,8 +22,14 @@ from department.views import DepartmentListView
 from course.views import CourseListView
 from question.views import QuestionListView
 from discussion.views import DiscussionListView
+from post.views import PostListView
+from answer.views import AnswerListView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    path('answer/', AnswerListView.as_view(), name = 'Answer'),
+    
+    path ('post/', PostListView.as_view(),name = 'Post'),
     
     path('discuss/', DiscussionListView.as_view(), name = 'Dicussion'),
     
